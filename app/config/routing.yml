@@ -1,0 +1,26 @@
+event_example_dipatcher:
+    resource: "@EventExampleDipatcherBundle/Resources/config/routing.xml"
+    prefix:   /
+
+my_app2nadir:
+    resource: "@MyApp2nadirBundle/Resources/config/routing.xml"
+    prefix:   /{_locale}
+
+my_app_my_fos:
+    resource: "@MyAppMyFOSBundle/Resources/config/routing.xml"
+    prefix:   /{_locale}
+
+my_app_blog:
+    resource: "@MyAppBlogBundle/Resources/config/routing.xml"
+    prefix:   /{_locale}
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+# app/config/routing.yml
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+    
+places:
+    type:     rest
+    resource: AppBundle\Controller\PlaceController

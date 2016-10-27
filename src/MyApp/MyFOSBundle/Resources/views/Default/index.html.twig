@@ -1,0 +1,16 @@
+{% extends "MyAppMyFOSBundle::layout.html.twig" %}
+{% block title %}Demo Application{% endblock %}
+{% block content %}
+{% block fos_user_content %}
+    
+    
+    
+    <div class="jumbotron">
+        {{ 'Le site où on apprend tout... à partir de zéro !'|trans }}
+        <h1>{{ 'athentification.heading'|trans }} </h1>
+        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+      </div>
+{% include 'FOSUserBundle:Security:login.html.twig' %}
+{% endblock %}
+{% endblock %}

@@ -1,0 +1,14 @@
+acteur: Acteur 
+acteur.nom: Nom
+acteur.prenom: Prénom 
+acteur.dateNaissance: Date de naissance 
+acteur.sexe: sexe 
+acteur.liste: list des acteurs
+acteur.ajouter: ajouter un acteur
+security.login.username: Utilisateur
+security.login.password: Mot de passe
+security.login.submit: Envoyer
+security.login.remember_me: souvenir
+athentification.heading: Athentification Sécurisé
+Le site où on apprend tout... à partir de zéro !: ce site ou on apprend tout
+langage: chisisser le langage
