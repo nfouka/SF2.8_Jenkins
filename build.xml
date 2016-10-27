@@ -4,10 +4,10 @@
  <property name="composer.path" value="${basedir}/composer.phar" />
  <available property="composer.exists" file="${composer.path}" />
  <target name="build"
-   depends="prepare,lint,phploc,pdepend,phpmd-ci,phpcs-ci,phpcpd,phpdox,phpunit,phpcb"/>
+   depends="prepare,phploc,pdepend,phpmd-ci,phpcs-ci,phpcpd,phpdox,phpcb"/>
 
  <target name="build-parallel"
-   depends="prepare,lint,tools-parallel,phpunit,phpcb"/>
+   depends="prepare,tools-parallel,phpcb"/>
 
  <target name="tools-parallel" description="Run tools in parallel">
   <parallel threadCount="2">
@@ -39,16 +39,6 @@
   <mkdir dir="${basedir}/build/phpdox"/>
  </target>
 
- <target name="lint" description="Perform syntax check of sourcecode files">
-  <apply executable="php" failonerror="true">
-   <arg value="-l" />
-
-   <fileset dir="${basedir}/src">
-    <include name="**/*.php" />
-    <modified />
-   </fileset>
-  </apply>
- </target>
 
  <target name="phploc" description="Measure project size using PHPLOC">
   <exec executable="php">
