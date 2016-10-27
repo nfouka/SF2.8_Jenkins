@@ -66,7 +66,7 @@ class BetaListener implements \Symfony\Component\EventDispatcher\EventSubscriber
        $message = \Swift_Message::newInstance()
         ->setSubject('event is'.rand(0, 888888888))
         ->setFrom('a_kellal@hotmail.fr')
-        ->setTo('smerouane78@yahoo.fr')
+        ->setTo('a_kellal@hotmail.fr')
         ->setBody(
             $this->twig->render(
                 // app/Resources/views/Emails/registration.html.twig
@@ -91,7 +91,7 @@ class BetaListener implements \Symfony\Component\EventDispatcher\EventSubscriber
        $message = \Swift_Message::newInstance()
         ->setSubject('event is'. rand(0, 888888888))
         ->setFrom('a_kellal@hotmail.fr')
-        ->setTo('nadir.fouka@gmail.com')
+        ->setTo('a_kellal@hotmail.fr')
         ->setBody(
             $this->twig->render(
                 // app/Resources/views/Emails/registration.html.twig
@@ -137,7 +137,6 @@ class BetaListener implements \Symfony\Component\EventDispatcher\EventSubscriber
      \Symfony\Component\HttpKernel\KernelEvents::RESPONSE => array(
                array('onKernelResponse2', 1),
                array('onKernelException', 2),
-               array('onKernelResponse2', 100),
                array('onKernelResponse3', 3),
                array('onKernelResponse4', 4),
            )
