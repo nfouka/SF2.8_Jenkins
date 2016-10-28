@@ -47,7 +47,7 @@
    <arg value="${basedir}/build/logs/phploc.csv" />
    <arg path="${basedir}/src" />
   </exec>
-  <exec executable="php" failonerror="true">
+  <exec executable="php">
         <arg value="composer.phar" />
         <arg value="update" />
     </exec>
@@ -121,7 +121,7 @@
 
  <target name="phpunit" description="Run unit tests with PHPUnit">
  
-  <exec executable="php" failonerror="true" >
+  <exec executable="php"  >
     <arg value="phpunit.phar" />
   </exec>
  </target>
