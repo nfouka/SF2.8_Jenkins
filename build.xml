@@ -146,7 +146,6 @@
  </target>
 
  <target name="composer" unless="composer.exists">
-  <get src="http://getcomposer.org/composer.phar" dest="${composer.path}" />
-  <chmod file="${composer.path}" perm="775" />
+  
  </target>
 </project>
