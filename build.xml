@@ -30,7 +30,7 @@
   <delete dir="${basedir}/build/pdepend"/>
  </target>
 
- <target name="prepare" depends="clean,vendors" description="Prepare for build">
+ <target name="prepare" depends="vendors" description="Prepare for build">
   <mkdir dir="${basedir}/build/api"/>
   <mkdir dir="${basedir}/build/code-browser"/>
   <mkdir dir="${basedir}/build/coverage"/>
@@ -47,7 +47,7 @@
    <arg value="${basedir}/build/logs/phploc.csv" />
    <arg path="${basedir}/src" />
   </exec>
-  <exec executable="php" failonerror="true">
+  <exec executable="php">
         <arg value="composer.phar" />
         <arg value="update" />
     </exec>
@@ -121,7 +121,7 @@
 
  <target name="phpunit" description="Run unit tests with PHPUnit">
  
-  <exec executable="php" failonerror="true" >
+  <exec executable="php"  >
     <arg value="phpunit.phar" />
   </exec>
  </target>
@@ -139,10 +139,13 @@
  </target>
 
  <target name="vendors" depends="composer">
-    <exec executable="php" failonerror="true">
+    <exec executable="php">
         <arg value="composer.phar" />
         <arg value="update" />
     </exec>
  </target>
 
+ <target name="composer" unless="composer.exists">
+  
+ </target>
 </project>
