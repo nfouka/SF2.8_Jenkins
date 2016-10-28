@@ -22,7 +22,8 @@ class AppKernel extends Kernel
             new MyApp2\nadirBundle\MyApp2nadirBundle(),
             new FOS\RestBundle\FOSRestBundle(),
             new Event\ExampleDipatcherBundle\EventExampleDipatcherBundle(),
-            new Jenkins\ConfBundle\JenkinsConfBundle() , 
+            new Jenkins\ConfBundle\JenkinsConfBundle() ,
+            new Jenkins\MyAppBundle\JenkinsMyAppBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

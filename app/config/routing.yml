@@ -1,3 +1,7 @@
+jenkins_my_app:
+    resource: "@JenkinsMyAppBundle/Resources/config/routing.xml"
+    prefix:   /
+
 event_example_dipatcher:
     resource: "@EventExampleDipatcherBundle/Resources/config/routing.xml"
     prefix:   /

@@ -4,7 +4,7 @@
  <property name="composer.path" value="${basedir}/composer.phar" />
  <available property="composer.exists" file="${composer.path}" />
  <target name="build"
-   depends="prepare,phploc,pdepend,phpmd-ci,phpcs-ci,phpcpd,phpdox,phpcb"/>
+   depends="prepare,phploc,pdepend,phpmd-ci,phpcs-ci,phpcpd,phpdox,phpcb,test"/>
 
  <target name="build-parallel"
    depends="prepare,tools-parallel,phpcb"/>
@@ -142,6 +142,15 @@
     <exec executable="php">
         <arg value="composer.phar" />
         <arg value="update" />
+    </exec>
+ </target>
+ 
+ 
+ <target name="test">
+    <exec executable="php">
+        <arg value="phpunit.phar" />
+        <arg value="-c" />
+        <arg value="app" />
     </exec>
  </target>
 
