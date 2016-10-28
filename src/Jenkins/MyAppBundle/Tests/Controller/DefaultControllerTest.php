@@ -1,6 +1,6 @@
 <?php
 
-namespace MyApp\MyFOSBundle\Tests\Controller;
+namespace Jenkins\MyAppBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
@@ -8,7 +8,7 @@ class DefaultControllerTest extends WebTestCase
 {
     public function testIndex()
     {
-        $client = static::createClient();
+        $client = static::createClient() ; 
 
         $crawler = $client->request('GET', '/');
 
