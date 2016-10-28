@@ -30,7 +30,7 @@
   <delete dir="${basedir}/build/pdepend"/>
  </target>
 
- <target name="prepare" depends="clean,vendors" description="Prepare for build">
+ <target name="prepare" depends="vendors" description="Prepare for build">
   <mkdir dir="${basedir}/build/api"/>
   <mkdir dir="${basedir}/build/code-browser"/>
   <mkdir dir="${basedir}/build/coverage"/>
